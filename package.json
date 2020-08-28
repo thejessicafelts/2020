@@ -1,0 +1,47 @@
+{
+  "name": "2020",
+  "version": "1.0.0",
+  "description": "Premium Wordpress Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejessicafelts/2020.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "Theme"
+  ],
+  "author": "Jessica Felts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thejessicafelts/2020/issues"
+  },
+  "homepage": "https://github.com/thejessicafelts/2020#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "@types/gulp": "^4.0.6",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "postcss-assets": "^5.0.0",
+    "yargs": "^15.4.1"
+  }
+}
