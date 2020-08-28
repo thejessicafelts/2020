@@ -5,6 +5,9 @@ import cleanCss from 'gulp-clean-css';
 import gulpif from 'gulp-if';
 // import browserSync from "browser-sync";
 const PRODUCTION = yargs.argv.prod;
+import postcss from 'gulp-postcss';
+import sourcemaps from 'gulp-sourcemaps';
+import autoprefixer from 'autoprefixer';
 
 /*
  * Go from this SCR Folder to a DIST folder within the WordPress directory...
@@ -49,8 +52,11 @@ export const copyScreenshot = () => {
 // Copy Styles to Build and Themes Folders
 export const styles = () => {
   return src('app/scss/main.scss')
+    .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
+    .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
     .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
+    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
     
     // Copy File to Build Folder
     .pipe(dest('build/css'))
@@ -58,6 +64,7 @@ export const styles = () => {
     // Copy File to Theme Folder
     .pipe(dest('../../Users/Jessica/Local Sites/2020/app/public/wp-content/themes/2020/css'))
 }
+
 
 // Watching for Changes
 export const watchForChanges = () => {
