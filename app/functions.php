@@ -34,4 +34,21 @@
         ));
     } add_action('init', '_themename_menus');
 
+    /* ===========================================================================
+        Error Handling
+    =========================================================================== */
+
+    if(!defined('ABSPATH')) exit;
+
+    // CUSTOM WRITE LOG
+    if (!function_exists('write_log')) {
+        function write_log ($log) {
+            if (is_array($log) || is_object($log)) {
+                error_log(print_r($log,true));
+            } else {
+                error_log($log);
+            }
+        }
+    }
+
 ?>
