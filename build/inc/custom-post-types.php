@@ -1,6 +1,4 @@
-<?php 
-
-// Include Custom Post Types Here
+<?php
 
 /*
     Custom Post Types Needed:
