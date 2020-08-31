@@ -16,6 +16,17 @@ import autoprefixer from 'autoprefixer';
  * 
 */
 
+// Copy README.md File
+export const copyReadMe = () => {
+  return src('README.md')
+
+    // Copy README.md to Build Folder
+    .pipe(dest('build'))
+
+    // Copy READMD.md to Theme Folder
+    .pipe(dest('../../Users/Jessica/Local Sites/2020/app/public/wp-content/themes/2020'))
+}
+
 // Copy PHP Files to Build Themes Folders
 export const copyPHP = () => {
   return src('app/**/*.php')
@@ -68,6 +79,7 @@ export const styles = () => {
 
 // Watching for Changes
 export const watchForChanges = () => {
+  watch('README.md', copyReadMe);
   watch('app/**/*.php', copyPHP);
   watch('app/scss/**/*.scss', styles);
   // watch('app/images/**/*.{jpg,jpeg,png,svg,gif}'); // Need to add task for this
