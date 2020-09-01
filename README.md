@@ -1,5 +1,12 @@
-# thejessicafelts 2020
-Custom WordPress Theme for [http://www.thejessicafelts.com](http://www.thejessicafelts.com)
+<h1>thejessicafelts-2020</h1>
+<p>A custom WordPress Theme for the redesign of <a href="http://www.thejessicafelts.com">www.thejessicafelts.com</a></p>
 
-##### v0.1.0
-Information RE this version.
+<h2>Version Notes &mdash;</h2>
+<details>
+  <summary><strong>v0.1.0</strong></summary>
+  <p>Information about this release</p>
+</details>
+<details>
+  <summary><strong>v0.0.1</strong></summary>
+  <p>Information about this release</p>
+</details>
