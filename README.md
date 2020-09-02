@@ -3,7 +3,7 @@
 
 <h3>Version Notes &mdash;</h3>
 <details>
-  <summary><strong>v 0.1.0</strong></summary>
+  <summary><code>v 0.1.0</code></summary>
   <p>Information about this release</p>
 </details>
 <details>
