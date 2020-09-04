@@ -217,6 +217,58 @@ function cpt_events() {
 } add_action('init', 'cpt_events', 0);
 
 // Insights CPT
+function cpt_insights() {
+
+    $labels = array(
+        'name'                  => _x('Insights', '_themename'),
+        'singular_name'         => _x('Insight', '_themename'),
+        'menu_name'             => __('Insights', '_themename'),
+        'parent_item_colon'     => __('Insights', '_themename'),
+        'all_items'             => __('All Insights', '_themename'),
+        'view_item'             => __('View Insight', '_themename'),
+        'add_new_items'         => __('Add New Insights', '_themename'),
+        'add_new'               => __('Add New Insight', '_themename'),
+        'edit_item'             => __('Edit Insight', '_themename'),
+        'update_item'           => __('Update Insight', '_themename'),
+        'search_items'          => __('Search Insights', '_themename'),
+        'not_found'             => __('Insight Not Found', '_themename'),
+        'not_found_in_trash'    => __('Insight Not Found in Trash', '_themename'),
+    );
+    
+    $args = array(
+        'label'                 => __('Insights', '_themename'),
+        'description'           => __('insights', '_themename'),
+        'labels'                => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'              => array( 'title',
+                                          'editor',
+                                          'excerpt',
+                                          'author',
+                                          'thumbnail',
+                                          'comments',
+                                          'revisions',
+                                          'custom-fields'
+                                        ),
+        // 'taxonomies'            => array(''),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 5,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'post',
+        'show_in_rest'          => true,
+ 
+    );
+
+    register_post_type('insights', $args);
+
+} add_action('init', 'cpt_insights', 0);
 
 // Recommendations CPT
 
