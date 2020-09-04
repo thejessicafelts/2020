@@ -276,7 +276,7 @@ function cpt_recommendations() {
     $labels = array(
         'name'                  => _x('Recommendations', '_themename'),
         'singular_name'         => _x('Recommendation', '_themename'),
-        'menu_name'             => __('Recommendations', '_themename'),
+        'menu_name'             => __('Recos', '_themename'),
         'parent_item_colon'     => __('Recommendations', '_themename'),
         'all_items'             => __('All Recommendations', '_themename'),
         'view_item'             => __('View Recommendation', '_themename'),
