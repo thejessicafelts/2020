@@ -271,6 +271,58 @@ function cpt_insights() {
 } add_action('init', 'cpt_insights', 0);
 
 // Recommendations CPT
+function cpt_recommendations() {
+
+    $labels = array(
+        'name'                  => _x('Recommendations', '_themename'),
+        'singular_name'         => _x('Recommendation', '_themename'),
+        'menu_name'             => __('Recommendations', '_themename'),
+        'parent_item_colon'     => __('Recommendations', '_themename'),
+        'all_items'             => __('All Recommendations', '_themename'),
+        'view_item'             => __('View Recommendation', '_themename'),
+        'add_new_items'         => __('Add New Recommendations', '_themename'),
+        'add_new'               => __('Add New Recommendation', '_themename'),
+        'edit_item'             => __('Edit Recommendation', '_themename'),
+        'update_item'           => __('Update Recommendation', '_themename'),
+        'search_items'          => __('Search Recommendations', '_themename'),
+        'not_found'             => __('Recommendation Not Found', '_themename'),
+        'not_found_in_trash'    => __('Recommendation Not Found in Trash', '_themename'),
+    );
+    
+    $args = array(
+        'label'                 => __('Recommendations', '_themename'),
+        'description'           => __('recommendation', '_themename'),
+        'labels'                => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'              => array( 'title',
+                                          'editor',
+                                          'excerpt',
+                                          'author',
+                                          'thumbnail',
+                                          'comments',
+                                          'revisions',
+                                          'custom-fields'
+                                        ),
+        // 'taxonomies'            => array(''),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 5,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'post',
+        'show_in_rest'          => true,
+ 
+    );
+
+    register_post_type('recommendation', $args);
+
+} add_action('init', 'cpt_recommendations', 0);
 
 // Tutorials CPT
 
