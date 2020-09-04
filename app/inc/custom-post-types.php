@@ -379,5 +379,57 @@ function cpt_tutorials() {
 } add_action('init', 'cpt_tutorials', 0);
 
 // Videos CPT
+function cpt_videos() {
+
+    $labels = array(
+        'name'                  => _x('Videos', '_themename'),
+        'singular_name'         => _x('Video', '_themename'),
+        'menu_name'             => __('Videos', '_themename'),
+        'parent_item_colon'     => __('Videos', '_themename'),
+        'all_items'             => __('All Videos', '_themename'),
+        'view_item'             => __('View Video', '_themename'),
+        'add_new_items'         => __('Add New Videos', '_themename'),
+        'add_new'               => __('Add New Video', '_themename'),
+        'edit_item'             => __('Edit Video', '_themename'),
+        'update_item'           => __('Update Video', '_themename'),
+        'search_items'          => __('Search Videos', '_themename'),
+        'not_found'             => __('Video Not Found', '_themename'),
+        'not_found_in_trash'    => __('Video Not Found in Trash', '_themename'),
+    );
+    
+    $args = array(
+        'label'                 => __('Videos', '_themename'),
+        'description'           => __('video', '_themename'),
+        'labels'                => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'              => array( 'title',
+                                          'editor',
+                                          'excerpt',
+                                          'author',
+                                          'thumbnail',
+                                          'comments',
+                                          'revisions',
+                                          'custom-fields'
+                                        ),
+        // 'taxonomies'            => array(''),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 5,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'post',
+        'show_in_rest'          => true,
+ 
+    );
+
+    register_post_type('video', $args);
+
+} add_action('init', 'cpt_videos', 0);
 
 ?>
