@@ -163,6 +163,58 @@ function cpt_employer() {
 } add_action('init', 'cpt_employer', 0);
 
 // Events CPT
+function cpt_events() {
+
+    $labels = array(
+        'name'                  => _x('Events', '_themename'),
+        'singular_name'         => _x('Event', '_themename'),
+        'menu_name'             => __('Events', '_themename'),
+        'parent_item_colon'     => __('Events', '_themename'),
+        'all_items'             => __('All Events', '_themename'),
+        'view_item'             => __('View Event', '_themename'),
+        'add_new_items'         => __('Add New Events', '_themename'),
+        'add_new'               => __('Add New Event', '_themename'),
+        'edit_item'             => __('Edit Event', '_themename'),
+        'update_item'           => __('Update Event', '_themename'),
+        'search_items'          => __('Search Events', '_themename'),
+        'not_found'             => __('Event Not Found', '_themename'),
+        'not_found_in_trash'    => __('Event Not Found in Trash', '_themename'),
+    );
+    
+    $args = array(
+        'label'                 => __('events', '_themename'),
+        'description'           => __('Events', '_themename'),
+        'labels'                => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'              => array( 'title',
+                                          'editor',
+                                          'excerpt',
+                                          'author',
+                                          'thumbnail',
+                                          'comments',
+                                          'revisions',
+                                          'custom-fields'
+                                        ),
+        // 'taxonomies'            => array(''),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 5,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'post',
+        'show_in_rest'          => true,
+ 
+    );
+
+    register_post_type('events', $args);
+
+} add_action('init', 'cpt_events', 0);
 
 // Insights CPT
 
