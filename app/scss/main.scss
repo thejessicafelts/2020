@@ -13,7 +13,17 @@ body {
   background-color: $cream;
 }
 
+ul {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 @import "partials/layout";
 
 @import "partials/header";
 @import "partials/footer";
+
+@import "partials/changelog";

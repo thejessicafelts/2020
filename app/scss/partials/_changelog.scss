@@ -1,0 +1,56 @@
+// Main Container
+.changelog {
+
+    // Version Container
+    .changelog__version {
+        border: 1px solid $slate;
+        margin: 10px auto;
+        padding: 30px;
+    
+        // Version Specific Entries
+        ul.changelog__changelog {
+
+            // Generic Tag Styles
+            li span.changelog__changelog--tag {
+                border-radius: 25px;
+                color: $slate;
+                display: inline-block;
+                font-size: 0.75rem;
+                font-weight: 600;
+                margin: 5px 10px 5px 0px;
+                padding: 7px 13px 6px;
+                text-transform: uppercase;
+                width: 88px;
+            }
+
+            // Added
+            li.changelog__changelog--added {
+                span.changelog__changelog--added-tag {
+                    background-color: #baffc9;
+                }
+            }
+
+            // Changed
+            li.changelog__changelog--changed {
+                span.changelog__changelog--changed-tag {
+                    background-color: #bae1ff;
+                }
+            }
+
+            // Fixed
+            li.changelog__changelog--fixed {
+                span.changelog__changelog--fixed-tag {
+                    background-color: #ffdfba;
+                }
+            }
+
+            // Removed
+            li.changelog__changelog--removed {
+                span.changelog__changelog--removed-tag {
+                    background-color: #ffb3ba;
+                }
+            }
+        
+        } 
+    }
+}
