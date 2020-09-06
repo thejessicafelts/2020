@@ -80,6 +80,60 @@ function cpt_alerts() {
 
 } add_action('init', 'cpt_alerts', 0);
 
+// Changelog CPT
+function cpt_changelog() {
+
+    $labels = array(
+        'name'                  => _x('Theme Changelog', '_themename'),
+        'singular_name'         => _x('Change', '_themename'),
+        'menu_name'             => __('Changelog', '_themename'),
+        'parent_item_colon'     => __('Changelog', '_themename'),
+        'all_items'             => __('All Changes', '_themename'),
+        'view_item'             => __('View Changes', '_themename'),
+        'add_new_items'         => __('Add New Changes', '_themename'),
+        'add_new'               => __('Add New Change', '_themename'),
+        'edit_item'             => __('Edit Changelog', '_themename'),
+        'update_item'           => __('Update Change', '_themename'),
+        'search_items'          => __('Search Changes', '_themename'),
+        'not_found'             => __('Change Not Found', '_themename'),
+        'not_found_in_trash'    => __('Change Not Found in Trash', '_themename'),
+    );
+    
+    $args = array(
+        'label'                 => __('changelog', '_themename'),
+        'description'           => __('Changelog', '_themename'),
+        'labels'                => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'              => array( 'title',
+                                          'editor',
+                                          'excerpt',
+                                          'author',
+                                          'thumbnail',
+                                          'comments',
+                                          'revisions',
+                                          'custom-fields'
+                                        ),
+        // 'taxonomies'            => array(''),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 5,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'post',
+        'show_in_rest'          => true,
+ 
+    );
+
+    register_post_type('changelog', $args);
+
+} add_action('init', 'cpt_changelog', 0);
+
 // Education CPT
 function cpt_education() {
 
