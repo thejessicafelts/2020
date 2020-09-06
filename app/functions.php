@@ -1,11 +1,4 @@
 <?php
-    
-    /* ===========================================================================
-        Includes
-    =========================================================================== */
-
-    require get_template_directory() . '/inc/white-label.php';
-    require get_template_directory() . '/inc/custom-post-types.php';
 
     /* ============================================================================
         Removing the WP Admin Bar
@@ -57,5 +50,13 @@
             }
         }
     }
+
+    /* ===========================================================================
+        Includes
+    =========================================================================== */
+
+    require get_template_directory() . '/inc/white-label.php';
+    require get_template_directory() . '/inc/custom-post-types.php';
+    require get_template_directory() . '/inc/custom-user-roles.php';
 
 ?>
