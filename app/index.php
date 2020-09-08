@@ -3,7 +3,9 @@
         <!-- INDEX -->
         <section id="section--index" class="layout__page--index">
             <div class="layout__container--fixed-width">
-                Index Page
+            
+            <?php // The Loop ?>
+
             </div>
         </section>
         <!-- end INDEX -->
